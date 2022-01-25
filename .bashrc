@@ -1,12 +1,11 @@
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source $HOME/.cargo/env
-
 GIT_PS1_SHOWDIRTYSTATE=true
 export PS1='\h\[\033[00m\]:\W\[\033[31m\]$(__git_ps1 [%s])\[\033[00m\]\$ '
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
+  # ADD curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o git-completion.bash
+  # ADD curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o git-prompt.sh
+  # ADD curl https://raw.githubusercontent.com/wp-cli/wp-cli/master/utils/wp-completion.bash -o wp-completion.bash
 fi
 
 export XDG_CONFIG_HOME="$HOME/.config"
